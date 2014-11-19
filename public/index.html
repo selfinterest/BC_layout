@@ -4,7 +4,7 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
-<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Page Title Here :)</title>
 <meta name="description" content="">
 <meta name="author" content="">
@@ -15,9 +15,9 @@
 
 <!-- CSS
 ================================================== -->
-<link rel="stylesheet" href="/css/grid.css">
-<link rel="stylesheet" href="/css/my.css">
 <link rel="stylesheet" href="/bootstrap/less/bootstrap.css">
+    <link rel="stylesheet" href="/bootstrap/less/responsive.css">
+<link rel="stylesheet" href="/css/my.css">
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -31,8 +31,9 @@
 
 </head>
 <body>
-    <div class="container container_12 responsive clearfix"><!-- clearfix is necessary to have the height fit the floating contents -->
-            <div class="grid_4">
+    <div class="container three-columns-two-rows"><!-- clearfix is necessary to have the height fit the floating contents -->
+        <div class="row-fluid">
+            <div class="span4">
                 <div class="split-box">
                     <div class="top">
                         <img class="container-sized" src="/img/wall-street-bull.jpg">
@@ -40,15 +41,14 @@
                     <div class="bottom blue">
                         <h3 class="feature type">Featured insight</h3>
                         <h1 class="feature title">One line title goes here</h1>
-                        <p class="feature text"></p>
+                        <p class="feature text">BLAH BLAH BLAH</p>
                         <span class="pull-right feature read-more">
                             Read more &gt
                         </span>
-
                     </div>
                 </div>
             </div>
-            <div class="grid_4">
+            <div class="span4">
                 <div class="split-box">
                     <div class="top">
                         <img class="container-sized" src="/img/wall-street-sign-pic.jpg">
@@ -57,14 +57,13 @@
                         <h3 class="feature type">Featured video</h3>
                         <h1 class="feature title">Title goes here</h1>
                         <p class="feature text">Blah blah blah</p>
-                        <span class="pull-right feature read-more">
-                            View video &gt
-                        </span>
-
+                    <span class="pull-right feature read-more">
+                        View video &gt
+                    </span>
                     </div>
                 </div>
             </div>
-            <div class="grid_4">
+            <div class="span4">
                 <div class="split-box">
                     <div class="top">
                         <img class="container-sized" src="/img/barchart.jpg">
@@ -77,7 +76,9 @@
                     </div>
                 </div>
             </div>
-            <div class="grid_4">
+        </div>
+        <div class="row-fluid">
+            <div class="span4">
                 <div class="split-box">
                     <div class="top">
                         <img class="container-sized" src="/img/barchart.jpg">
@@ -90,7 +91,7 @@
                     </div>
                 </div>
             </div>
-
+        </div><!-- row -->
     </div><!--container -->
 </body>
 </html>
