@@ -9,9 +9,16 @@ body {
     height: 100%;
     font-family: "AkkuratLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
 .three-columns-two-rows {
     background-color: #FFFFFF;
-    //padding: 10px;
+    /*padding: 10px;*/
     font-size: 10px;
     /*max-width: 1202px;*/
 }
@@ -20,8 +27,8 @@ body {
     float: right;
 }
 
+@split-box-height: 319px;
 
-@split-box-height: 370px;
 
 .split-box {
     height: @split-box-height;
@@ -36,23 +43,6 @@ body {
 .split-box > .bottom {
     height: 50%;
 }
-//On phones and tablets in portrait mode, simply hide the top of the split box and cut the split box height by 50%
-@media (max-width: 767px) {
-    .split-box {
-        height: @split-box-height / 2;
-        max-height: @split-box-height / 2;
-        margin-bottom: 5px;
-    }
-    .split-box > .top {
-        height: 0;
-    }
-
-    .split-box > .bottom {
-        height: 100%;
-    }
-}
-
-
 .column > .split {
 
 }
@@ -69,6 +59,8 @@ body {
 .top > img {
     width: 100%;
     height: 100%;
+    max-height: @split-box-height/2;
+    max-width: 310px;
 }
 
 img.container-sized {
