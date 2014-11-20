@@ -1,11 +1,18 @@
+@font-face {
+    font-family: 'AkkuratLight';
+    src: url('Akkurat-Light.ttf') format('ttf'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('Akkurat-Light.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
 body {
     background-color: lightgrey;
     height: 100%;
-    font-size: 100%;
-
+    font-family: "AkkuratLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .three-columns-two-rows {
     background-color: #FFFFFF;
+    padding: 10px;
+    font-size: 10px;
     /*max-width: 1202px;*/
 }
 
@@ -13,8 +20,12 @@ body {
     float: right;
 }
 
+@split-box-height: 370px;
+
 .split-box {
-    height: 250px;
+    height: @split-box-height;
+    max-height: @split-box-height;
+
 }
 
 .split-box > .top {
@@ -43,8 +54,8 @@ body {
 }
 
 img.container-sized {
-    max-width: 100%;
-    max-height: 100%;
+    /*max-width: 100%;
+    max-height: 100%;*/
 }
 
 .darkblue {
@@ -64,17 +75,17 @@ img.container-sized {
 }
 .feature.type {
     text-transform: uppercase;
-    font-size: .5em;
-    line-height: 1.2;
+    font-size: .75em;
+    line-height: 1.2em;
 }
 
 .feature.title {
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .feature.text {
-    font-size: .5em;
+    font-size: .875em;
     color: #CCCCCC;
 }
 
