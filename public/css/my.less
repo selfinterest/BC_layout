@@ -1,4 +1,4 @@
-@import "../bootstrap/less/variables.less";
+@import "../bootstrap3/less/variables.less";
 @golden-ratio: 1.61803;
 
 @font-face {
@@ -27,6 +27,8 @@ body {
 .split-box {
     height: @split-box-height;
     max-height: @split-box-height;
+    max-width: @split-box-width;
+
 
 }
 
@@ -38,7 +40,7 @@ body {
     height: 50%;
 }
 //On phones and tablets in portrait mode, simply hide the top of the split box and cut the split box height by 50%
-@media (max-width: 767px) {
+/*@media (max-width: 767px) {
     .split-box {
         height: @split-box-height / 2;
         max-height: @split-box-height / 2;
@@ -51,7 +53,7 @@ body {
     .split-box > .bottom {
         height: 100%;
     }
-}
+}*/
 
 
 .column > .split {
@@ -117,16 +119,16 @@ img.container-sized {
 //Utilities
 .with-top-margin {
     @media (min-width: 1200px) {
-        margin-top: @gridGutterWidth1200;
+        margin-top: 10px
     }
 
 
-    @media (min-width: 768px) and (max-width: 979px) {
-        margin-top: @gridGutterWidth;
+    @media (min-width: @screen-sm-max) and (max-width: @screen-md-min) {
+        margin-top: @grid-gutter-width;
     }
 
     //No top margin on phones because columns will be stacked
-    @media (max-width: 767px) {
+    @media (max-width: @screen-sm-max) {
         margin-top: 0;
     }
 
@@ -134,12 +136,12 @@ img.container-sized {
 
 .with-bottom-margin {
     @media (min-width: 1200px) {
-        margin-bottom: @gridGutterWidth1200;
+        margin-bottom: 10px;
     }
 
 
     @media (min-width: 768px) and (max-width: 979px) {
-        margin-bottom: @gridGutterWidth;
+        margin-bottom: @grid-gutter-width;
     }
 
     //No top margin on phones because columns will be stacked
