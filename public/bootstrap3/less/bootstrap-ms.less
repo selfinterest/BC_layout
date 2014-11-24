@@ -1,32 +1,38 @@
 // Bootstrap Mid-Small - col-ms-* - the missing grid set for Bootstrap3.
 //
-// This is a hack to fill the gap between 480 and 767 pixels - a missing range
+// This is a hack to fill the gap between 480 and 760 pixels - a missing range
 // in the bootstrap responsive grid structure.  Use these classes to style pages
 // on cellphones when they transition from portrait to landscape.
 //
-// Contains:
-//   Columns, Offsets, Pushes, Pulls for the Mid-Small layout
-//   Visibility classes for the Mid-Small layout
-//   Redefined visibility classes for the Extra Small layout
+// NOTE: Here I use SASS instead of LESS for styling.  To convert to LESS
+// replace '$screen' with '@screen' and '$grid' with '@grid'.
 //
 // See https://github.com/twbs/bootstrap/issues/10203 for more info.
-// Original gist: https://gist.github.com/andyl/6360906
 //
-// Instructions: Add the following to the end of bootstrap.scss
+// Columns, offsets, pushes, and pulls for the ms device range, from phones
+// to tablets.
 //
-//   @import "bootstrap-ms";
-//
+// Note that `.col-ms-12` doesn't get floated on purposeâ€”there's no need since
+// it's full-width.
 
-// Mid-Small breakpoint
+@import 'bootstrap';
 
-@screen-ms: 480px;
-@screen-ms-min: @screen-ms;
-@screen-ms-max: (@screen-sm-min - 1);
+@screen-xs-max: 480px; //overrides responsive-utilities
+@screen-ms-max: 768px;
 
-// Redefined Extra Small max value (Can't override non-default variables in SASS)
-@screen-xs-max-new: (@screen-ms-min - 1);
+.visible-ms {
+  @media (max-width: @screen-ms-max) {
+    .responsive-visibility();
+  }
+}
 
-// Common styles (see make-grid-columns() in bootstrap/mixins/_grid-framework.scss)
+.hidden-ms {
+  @media (max-width: @screen-ms-max) {
+    .responsive-invisibility();
+  }
+}
+
+// ----- common styles - from twbs/bootstrap/blob/master/less/grid.less -----
 
 .col-ms-1,
 .col-ms-2,
@@ -48,78 +54,208 @@
   padding-right: (@grid-gutter-width / 2);
 }
 
-// Misc. class adjustments for col-ms
+// ----- col-ms breakpoints and related classes -----
 
-@media (min-width: @screen-ms) and (max-width: @screen-ms-max) {
+@media (min-width: @screen-xs) and (max-width: @screen-xs-max) {
   .container {
-    max-width: @screen-sm - 20px;
+    @media (max-width: @screen-sm ) {
+      max-width: @screen-sm - 20px;
+    }
   }
-  .hidden-xs {
-    display: block !important;
+
+  .col-ms-1,
+  .col-ms-2,
+  .col-ms-3,
+  .col-ms-4,
+  .col-ms-5,
+  .col-ms-6,
+  .col-ms-7,
+  .col-ms-8,
+  .col-ms-9,
+  .col-ms-10,
+  .col-ms-11 {
+    float: left;
   }
-}
 
-// col-ms grid
-
-@media (min-width: @screen-ms-min) and (max-width: @screen-ms-max) {
-@include make-grid(ms);
-}
-
-// Visibility utilities
-
-@include responsive-invisibility('.visible-xs, .visible-ms');
-
-.visible-xs-block,
-.visible-xs-inline,
-.visible-xs-inline-block,
-.visible-ms-block,
-.visible-ms-inline,
-.visible-ms-inline-block {
-  display: none !important;
-}
-
-@media (max-width: @screen-xs-max-new) {
-@include responsive-visibility('.visible-xs');
-}
-.visible-xs-block {
-  @media (max-width: @screen-xs-max-new) {
-    display: block !important;
+  .col-ms-1 {
+    width: percentage((1 / @grid-columns));
   }
-}
-.visible-xs-inline {
-  @media (max-width: @screen-xs-max-new) {
-    display: inline !important;
-  }
-}
-.visible-xs-inline-block {
-  @media (max-width: @screen-xs-max-new) {
-    display: inline-block !important;
-  }
-}
 
-@media (min-width: @screen-ms-min) and (max-width: @screen-ms-max) {
-@include responsive-visibility('.visible-ms');
-}
-.visible-ms-block {
-  @media (min-width: @screen-ms-min) and (max-width: @screen-ms-max) {
-    display: block !important;
+  .col-ms-2 {
+    width: percentage((2 / @grid-columns));
   }
-}
-.visible-ms-inline {
-  @media (min-width: @screen-ms-min) and (max-width: @screen-ms-max) {
-    display: inline !important;
-  }
-}
-.visible-ms-inline-block {
-  @media (min-width: @screen-ms-min) and (max-width: @screen-ms-max) {
-    display: inline-block !important;
-  }
-}
 
-@media (max-width: @screen-xs-max-new) {
-@include responsive-invisibility('.hidden-xs');
-}
+  .col-ms-3 {
+    width: percentage((3 / @grid-columns));
+  }
 
-@media (min-width: @screen-ms-min) and (max-width: @screen-ms-max) {
-@include responsive-invisibility('.hidden-ms');
+  .col-ms-4 {
+    width: percentage((4 / @grid-columns));
+  }
+
+  .col-ms-5 {
+    width: percentage((5 / @grid-columns));
+  }
+
+  .col-ms-6 {
+    width: percentage((6 / @grid-columns));
+  }
+
+  .col-ms-7 {
+    width: percentage((7 / @grid-columns));
+  }
+
+  .col-ms-8 {
+    width: percentage((8 / @grid-columns));
+  }
+
+  .col-ms-9 {
+    width: percentage((9 / @grid-columns));
+  }
+
+  .col-ms-10 {
+    width: percentage((10/ @grid-columns));
+  }
+
+  .col-ms-11 {
+    width: percentage((11/ @grid-columns));
+  }
+
+  .col-ms-12 {
+    width: 100%;
+  }
+
+  // Push and pull columns for source order changes
+  .col-ms-push-1 {
+    left: percentage((1 / @grid-columns));
+  }
+
+  .col-ms-push-2 {
+    left: percentage((2 / @grid-columns));
+  }
+
+  .col-ms-push-3 {
+    left: percentage((3 / @grid-columns));
+  }
+
+  .col-ms-push-4 {
+    left: percentage((4 / @grid-columns));
+  }
+
+  .col-ms-push-5 {
+    left: percentage((5 / @grid-columns));
+  }
+
+  .col-ms-push-6 {
+    left: percentage((6 / @grid-columns));
+  }
+
+  .col-ms-push-7 {
+    left: percentage((7 / @grid-columns));
+  }
+
+  .col-ms-push-8 {
+    left: percentage((8 / @grid-columns));
+  }
+
+  .col-ms-push-9 {
+    left: percentage((9 / @grid-columns));
+  }
+
+  .col-ms-push-10 {
+    left: percentage((10/ @grid-columns));
+  }
+
+  .col-ms-push-11 {
+    left: percentage((11/ @grid-columns));
+  }
+
+  .col-ms-pull-1 {
+    right: percentage((1 / @grid-columns));
+  }
+
+  .col-ms-pull-2 {
+    right: percentage((2 / @grid-columns));
+  }
+
+  .col-ms-pull-3 {
+    right: percentage((3 / @grid-columns));
+  }
+
+  .col-ms-pull-4 {
+    right: percentage((4 / @grid-columns));
+  }
+
+  .col-ms-pull-5 {
+    right: percentage((5 / @grid-columns));
+  }
+
+  .col-ms-pull-6 {
+    right: percentage((6 / @grid-columns));
+  }
+
+  .col-ms-pull-7 {
+    right: percentage((7 / @grid-columns));
+  }
+
+  .col-ms-pull-8 {
+    right: percentage((8 / @grid-columns));
+  }
+
+  .col-ms-pull-9 {
+    right: percentage((9 / @grid-columns));
+  }
+
+  .col-ms-pull-10 {
+    right: percentage((10/ @grid-columns));
+  }
+
+  .col-ms-pull-11 {
+    right: percentage((11/ @grid-columns));
+  }
+
+  // Offsets
+  .col-ms-offset-1 {
+    margin-left: percentage((1 / @grid-columns));
+  }
+
+  .col-ms-offset-2 {
+    margin-left: percentage((2 / @grid-columns));
+  }
+
+  .col-ms-offset-3 {
+    margin-left: percentage((3 / @grid-columns));
+  }
+
+  .col-ms-offset-4 {
+    margin-left: percentage((4 / @grid-columns));
+  }
+
+  .col-ms-offset-5 {
+    margin-left: percentage((5 / @grid-columns));
+  }
+
+  .col-ms-offset-6 {
+    margin-left: percentage((6 / @grid-columns));
+  }
+
+  .col-ms-offset-7 {
+    margin-left: percentage((7 / @grid-columns));
+  }
+
+  .col-ms-offset-8 {
+    margin-left: percentage((8 / @grid-columns));
+  }
+
+  .col-ms-offset-9 {
+    margin-left: percentage((9 / @grid-columns));
+  }
+
+  .col-ms-offset-10 {
+    margin-left: percentage((10/ @grid-columns));
+  }
+
+  .col-ms-offset-11 {
+    margin-left: percentage((11/ @grid-columns));
+  }
 }
