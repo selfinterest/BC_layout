@@ -1,12 +1,20 @@
-<div class="top hidden-xs">
-    <img class="container-sized img-responsive"  ng-src="{{ img }}">
+<div class="top row hidden-sm hidden-xs">
+    <div class="col-xs-12">
+        <img class="container-sized img-responsive"  ng-src="{{ img }}">
+    </div>
 </div>
-<div class="bottom">
-    <h3 class="feature type">{{ type }}</h3>
-    <h5 class="feature title">{{ title }}</h5>
-    <p class="feature text">{{ text }}</p>
-    <span class="pull-right feature read-more">
-        Read more &gt
-    </span>
+<div class="bottom row">
+    <div class="bottom-left visible-sm-inline-block col-sm-4">
+        <img class="container-sized img-responsive"  ng-src="{{ img }}">
+    </div>
+    <div class="bottom-right col-sm-8 col-lg-12">
+        <h3 class="feature type">{{ type }}</h3>
+        <h5 class="feature title">{{ title }}</h5>
+        <p class="feature text">{{ text }}</p>
+        <span class="pull-right feature read-more">
+            Read more &gt
+        </span>
+    </div>
+
 </div>
 
