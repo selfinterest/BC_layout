@@ -29,10 +29,11 @@
 <link rel="apple-touch-icon" sizes="114x114" href="/skeletonimages/apple-touch-icon-114x114.png">
 
 </head>
-<body>
-    <div class="container three-columns-two-rows"><!-- clearfix is necessary to have the height fit the floating contents -->
-        <div class="row">
+<body ng-app="TestApp">
+    <div class="container three-columns-two-rows">
+        <div class="row no-gutter">
             <div class="col-xs-12 col-sm-6 col-md-4">
+                <split-box type="Featured insight" title="One line title goes here" text="BLAH BLAH BLAH" img="/img/wall-street-bull.jpg"></split-box>
                 <div class="split-box">
                     <div class="top hidden-xs">
                         <img class="container-sized img-responsive"  src="/img/wall-street-bull.jpg">
@@ -42,7 +43,7 @@
                         <h5 class="feature title">One line title goes here</h5>
                         <p class="feature text">BLAH BLAH BLAH</p>
                         <span class="pull-right feature read-more">
-                            Read more &gt
+                            Read more &gt;
                         </span>
                     </div>
                 </div>
@@ -57,7 +58,7 @@
                         <h1 class="feature title">Title goes here</h1>
                         <p class="feature text">Blah blah blah</p>
                     <span class="pull-right feature read-more">
-                        View video &gt
+                        View video &gt;
                     </span>
                     </div>
                 </div>
@@ -92,5 +93,7 @@
             </div>
         </div> <!-- /row -->
     </div><!-- /container -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>
