@@ -15,81 +15,27 @@
 
 <!-- CSS
 ================================================== -->
-<link rel="stylesheet" href="/bootstrap3/less/bootstrap.css">
-<link rel="stylesheet" href="/css/my.css">
+<link rel="stylesheet" href="/bootstrap3/less/bootstrap.css"/>
+<link rel="stylesheet" href="/css/my.css"/>
+<link rel="stylesheet" href="/css/split-box.css"/>
+
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-
-<!-- Favicons
-================================================== -->
-<link rel="shortcut icon" href="/skeleton/images/favicon.ico">
-<link rel="apple-touch-icon" href="/skeleton/images/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/skeleton/images/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/skeletonimages/apple-touch-icon-114x114.png">
 
 </head>
 <body ng-app="TestApp">
     <div class="container three-columns-two-rows">
         <div class="row no-gutter">
             <div class="col-xs-12 col-sm-6 col-md-4">
-                <split-box type="Featured insight" title="One line title goes here" text="BLAH BLAH BLAH" img="/img/wall-street-bull.jpg"></split-box>
-                <div class="split-box">
-                    <div class="top hidden-xs">
-                        <img class="container-sized img-responsive"  src="/img/wall-street-bull.jpg">
-                    </div>
-                    <div class="bottom blue">
-                        <h3 class="feature type">Featured insight</h3>
-                        <h5 class="feature title">One line title goes here</h5>
-                        <p class="feature text">BLAH BLAH BLAH</p>
-                        <span class="pull-right feature read-more">
-                            Read more &gt;
-                        </span>
-                    </div>
-                </div>
+                <div class="split-box" type="Featured insight" title="One line title goes here" text="BLAH BLAH BLAH" img="http://placekitten.com/370/180"></div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="split-box">
-                    <div class="top hidden-xs">
-                        <img class="container-sized img-responsive" src="/img/wall-street-sign-pic.jpg">
-                    </div>
-                    <div class="bottom grey">
-                        <h3 class="feature type">Featured video</h3>
-                        <h1 class="feature title">Title goes here</h1>
-                        <p class="feature text">Blah blah blah</p>
-                    <span class="pull-right feature read-more">
-                        View video &gt;
-                    </span>
-                    </div>
-                </div>
+                <div class="split-box" type="Featured video" title="One line title goes here" text="BLAH BLAH BLAH" img="http://placekitten.com/370/180"></div>
             </div>
             <!-- on small screens, split into two columns -->
             <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="split-box">
-                    <div class="top hidden-xs">
-                        <img class="container-sized img-responsive" src="/img/barchart.jpg">
-                    </div>
-                    <div class="bottom darkblue">
-                        <h3 class="feature type">Featured literature</h3>
-                        <h1 class="feature title">Two-line title goes here</h1>
-                        <p class="feature text">Blah blah blah</p>
-                        <h5 class="feature read-more">View video &gt</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="split-box">
-                    <div class="top hidden-xs">
-                        <img class="container-sized img-responsive" src="/img/ceo.jpg">
-                    </div>
-                    <div class="bottom darkblue">
-                        <h3 class="feature type">Featured literature</h3>
-                        <h1 class="feature title">Two-line title goes here</h1>
-                        <p class="feature text">Blah blah blah</p>
-                        <h5 class="feature read-more">View video &gt</h5>
-                    </div>
-                </div>
+                <div class="split-box" type="Featured literature" title="One line title goes here" text="BLAH BLAH BLAH" img="http://placekitten.com/370/180"></div>
             </div>
         </div> <!-- /row -->
     </div><!-- /container -->

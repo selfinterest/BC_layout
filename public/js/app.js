@@ -4,8 +4,7 @@
 angular.module("TestApp", [])
     .directive("splitBox", [function(){
         return {
-            replace: true,
-            restrict: "E",
+            restrict: "C",
             templateUrl: "/templates/split-box.html",
             scope: {
                 type: "@",
