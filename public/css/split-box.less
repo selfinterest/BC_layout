@@ -39,17 +39,22 @@
     > .bottom {
         height: 50%;
         max-height: 180px;
+
+        //Above 992px (i.e. in multi column mode, set the min-height
         @media(min-width: 992px){
             min-height: 180px;          //TODO: adjust for actual width
         }
+
+
     }
 
 
-    @media(min-width: 481px) and (max-width: 767px){
+    @media(min-width: 481px) and (max-width: 992px){
         > .bottom {
-            img {
-                height: 112px;
-                min-height: 112px;
+            img {  //The bottom image only shows up at these dimensions
+                height: 180px; //This parameter may need adjustment. It's the height of the container when there is stuff in it.
+                min-height: 180px;
+                max-height: 180px;
                 width: auto;
             }
         }
