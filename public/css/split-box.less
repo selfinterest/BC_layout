@@ -8,6 +8,20 @@
 .split-box {
 
     background-color: #696969;
+    margin: 8px;    //default margin
+
+    @media(min-width: 992px) and (max-width: 1199px){ //this is the two column size
+        margin: 5px;
+    }
+
+    @media(min-width: @screen-xs-max) and (max-width: @screen-sm-max) { //single column size, with picture
+        margin: 3px;
+    }
+
+    @media(max-width: @screen-xs-max) { //single column size, no picture
+        margin: 1px;
+    }
+
 
     > .top {
         img {
@@ -42,6 +56,12 @@
 
 
 
+
+    /*.row > [class*='col-'] {
+        @media(min-width: @screen-lg-min){
+            padding: 5px;
+        }
+    }*/
 
 
     //height: @split-box-height;
