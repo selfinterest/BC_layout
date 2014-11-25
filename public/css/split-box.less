@@ -8,7 +8,7 @@
 .split-box {
 
     background-color: #696969;
-
+    max-height: 370px;
 
     //margin: 8px;    //default margin
 
@@ -26,15 +26,22 @@
 
 
     > .top {
+        height: 50%;
 
         img {
+            max-height: 180px;
             width: 100%;
             height: auto;
+
         }
     }
 
     > .bottom {
         height: 50%;
+        max-height: 180px;
+        @media(min-width: 992px){
+            min-height: 180px;          //TODO: adjust for actual width
+        }
     }
 
 
