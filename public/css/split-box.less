@@ -4,6 +4,7 @@
 .split-box {
     background-color: #696969;
     max-height: 370px;
+    margin-bottom: 12px;
 
     /* Custom, iPhone Retina */
     @media only screen and (min-width : 320px) {
@@ -22,7 +23,7 @@
 
     /* Extra Small Devices, Phones */
     @media only screen and (min-width : 480px) {
-        //margin-bottom: 15px;
+        margin-bottom: 15px;
     }
 
     /* Small Devices, Tablets */
@@ -46,6 +47,44 @@
             max-height: 180px;
             min-height: 180px;
         }
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
+
+}
+
+.secondary-display-controls {
+
+    position: relative;
+    width: 40px;
+    //These two rules ensure the secondary display controls get moved down, but take up no space in the flow
+    top: 25px;
+    margin-top: -25px;
+    //Also, center the controls
+    margin-right: auto;
+    margin-left: auto;
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width : 320px) {
+
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        top: 0;
+        margin-top: 0;
     }
 
     /* Large Devices, Wide Screens */
