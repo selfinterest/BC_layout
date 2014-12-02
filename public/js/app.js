@@ -16,4 +16,12 @@ angular.module("TestApp", ["ui.bootstrap"])
 		        scope.collapse = true;
 	        }
         }
-    }]);
+    }])
+    .directive("secondaryDisplayControls", [function(){
+        return {
+            restrict: "C",
+            templateUrl: "/templates/secondary-display-controls.html"
+        }
+
+    }])
+;
