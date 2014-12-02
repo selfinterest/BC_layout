@@ -5,38 +5,42 @@
 }
 
 .responsive-gutters > [class*='col-'] {
-  padding: 8px;
-  @media(min-width: 992px) and (max-width: 1199px){ //this is the two column size
-    padding: 5px;
+
+  padding-bottom: 1px;
+  padding-right: 1px;
+  padding-left: 1px;
+
+  /* Custom, iPhone Retina */
+  @media only screen and (min-width : 320px) {
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
   }
 
-  @media(min-width: @screen-xs-max) and (max-width: @screen-sm-max) { //single column size, with picture
-    padding: 3px;
+  /* Extra Small Devices, Phones */
+  @media only screen and (min-width : 480px) {
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+
   }
 
-  @media(max-width: @screen-xs-max) { //single column size, no picture
-    padding: 1px;
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+    padding: 8px;
   }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
+    padding: 8px;
+  }
+
+  /* Large Devices, Wide Screens */
+  @media only screen and (min-width : 1200px) {
+    padding: 8px;
+  }
+
 }
-/*.responsive-gutters > [class*='col-'] {
-  padding-right: 5px;
-  padding-left: 5px;
-
-}*/
-
-/*.responsive-gutters-mixin() {
-
-}
-
-.gutter(@class: screen; @padding: 5px){
-  @media(min-width: @screen-@class-)
-}
-.gutter-bottom-lg > [class*='col-'] {
-  @media(min-width: @screen-lg-min){
-    padding: 5px;
-  }
-}*/
-
 
 .make-responsive-gutters(@class){
   
