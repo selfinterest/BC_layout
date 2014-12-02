@@ -4,11 +4,20 @@
 .split-box {
     background-color: #696969;
     max-height: 370px;
+
+    .top {
+        img {
+            max-height: 180px;
+            height: 100%;
+        }
+    }
+
+
     //margin-bottom: 12px;
 
     /* Custom, iPhone Retina */
     @media only screen and (min-width : 320px) {
-        > .top {
+       /* > .top {
             height: 0;
 
         }
@@ -18,7 +27,7 @@
             img {
                 height: 100%;
             }
-        }
+        }*/
     }
 
     /* Extra Small Devices, Phones */
@@ -33,7 +42,11 @@
 
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 992px) {
-        > .top {
+
+        .bottom {
+            min-height: 180px;
+        }
+       /* > .top {
             height: 50%;
             img {
                 max-height: 180px;
@@ -46,7 +59,7 @@
             height: 50%;
             max-height: 180px;
             min-height: 180px;
-        }
+        }*/
     }
 
     /* Large Devices, Wide Screens */
