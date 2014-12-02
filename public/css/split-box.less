@@ -1,9 +1,61 @@
 @import "../bootstrap3/less/variables";
 @import "utility";
 
-
-
 .split-box {
+    background-color: #696969;
+    max-height: 370px;
+
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width : 320px) {
+        > .top {
+            height: 0;
+
+        }
+
+        > .bottom {
+            height: 100%;
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        > .top {
+            height: 50%;
+            img {
+                max-height: 180px;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        > .bottom {
+            height: 50%;
+            max-height: 180px;
+            min-height: 180px;
+        }
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
+
+}
+
+/*.split-box {
 
     background-color: #696969;
     max-height: 370px;
@@ -23,7 +75,7 @@
     }*/
 
 
-    > .top {
+/*    > .top {
         height: 50%;
 
         img {
