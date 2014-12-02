@@ -11,10 +11,11 @@ angular.module("TestApp", ["ui.bootstrap"])
                 title: "@",
                 text: "@",
                 img: "@",
-                backgroundColor: "@"
+
             },
 	        link: function(scope, element, attr){
 		        scope.collapse = true;
+
 	        }
         }
     }])
