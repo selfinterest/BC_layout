@@ -10,7 +10,8 @@ angular.module("TestApp", ["ui.bootstrap"])
                 type: "@",
                 title: "@",
                 text: "@",
-                img: "@"
+                img: "@",
+                backgroundColor: "@"
             },
 	        link: function(scope, element, attr){
 		        scope.collapse = true;
@@ -20,7 +21,11 @@ angular.module("TestApp", ["ui.bootstrap"])
     .directive("secondaryDisplayControls", [function(){
         return {
             restrict: "C",
-            templateUrl: "/templates/secondary-display-controls.html"
+            scope: true,
+            templateUrl: "/templates/secondary-display-controls.html",
+            link: function(scope, element, attr){
+                scope.collapse = true;
+            }
         }
 
     }])
