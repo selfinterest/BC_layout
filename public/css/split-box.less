@@ -133,13 +133,47 @@
     position: absolute;
     z-index: 10;
     width: 100%;
+
+
     ul {
-        background-color: #FFFFFF;
+
         list-style: none;
         padding: 0;
         margin: 0;
-    }
+        > li {
+            border-top: 1px #FFFFFF solid;
 
+        }
+    }
+    .secondary-display-list-container {
+        background-color: #D6E7F1;      //this should be customized for each list
+        /* Custom, iPhone Retina */
+        @media only screen and (min-width : 320px) {
+
+        }
+
+        /* Extra Small Devices, Phones */
+        @media only screen and (min-width : 480px) {
+
+        }
+
+        /* Small Devices, Tablets */
+        @media only screen and (min-width : 768px) {
+
+        }
+
+        /* Medium Devices, Desktops */
+        @media only screen and (min-width : 992px) {
+
+        }
+
+        /* Large Devices, Wide Screens */
+        @media only screen and (min-width : 1200px) {
+
+        }
+        //margin-left: -8px;
+        //margin-right: -8px;
+    }
 }
 .secondary-display {
     z-index: 10;
