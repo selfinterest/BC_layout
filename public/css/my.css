@@ -74,11 +74,6 @@ body {
 .featured-insight .secondary-display-list-container {
   background-color: #d6e7f1;
 }
-@media (max-width: 480px) {
-  .featured-insight .secondary-display-list-container ul > li {
-    padding: 5px;
-  }
-}
 .featured-video .bottom-container {
   background-color: #dedede;
 }
@@ -92,11 +87,6 @@ body {
 }
 .featured-video .secondary-display-list-container {
   background-color: #dedede;
-}
-@media (max-width: 480px) {
-  .featured-video .secondary-display-list-container ul > li {
-    padding: 5px;
-  }
 }
 .featured-literature .bottom-container {
   background-color: #c0d1e6;
@@ -112,8 +102,8 @@ body {
 .featured-literature .secondary-display-list-container {
   background-color: #c0d1e6;
 }
-@media (max-width: 480px) {
-  .featured-literature .secondary-display-list-container ul > li {
-    padding: 5px;
-  }
+.action-link {
+  float: right;
+  text-transform: uppercase;
+  font-weight: bolder;
 }

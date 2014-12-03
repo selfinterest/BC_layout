@@ -36,6 +36,11 @@ body {
     .feature(#C0D1E6);
 }
 
+.action-link {
+    float: right;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
 
 //MIXINS
 .feature(@color) {
@@ -57,12 +62,7 @@ body {
 
     .secondary-display-list-container {
         background-color: @color;
-        ul > li {
-            @media (max-width: 480px){
-                padding: 5px;
-            }
 
-        }
     }
 
 
