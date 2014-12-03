@@ -1,0 +1,25 @@
+{
+  "name": "BostonCompanyLayout",
+  "version": "0.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.10.2",
+    "less-middleware": "^1.0.4",
+    "less": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/selfinterest/BC_layout.git"
+  },
+  "author": "Terrence C. Watson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/selfinterest/BC_layout/issues"
+  },
+  "homepage": "https://github.com/selfinterest/BC_layout"
+}
