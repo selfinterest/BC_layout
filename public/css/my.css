@@ -1,1 +1,63 @@
-.no-gutter>[class*='col-']{padding-right:0;padding-left:0}.responsive-gutters>[class*='col-']{padding:8px}@media (min-width:992px) and (max-width:1199px){.responsive-gutters>[class*='col-']{padding:5px}}@media (min-width:767px) and (max-width:991px){.responsive-gutters>[class*='col-']{padding:3px}}@media (max-width:767px){.responsive-gutters>[class*='col-']{padding:1px}}@font-face{font-family:'AkkuratLight';src:url('Akkurat-Light.ttf') format('ttf'),url('Akkurat-Light.ttf') format('truetype')}body{background-color:lightgrey;height:100%;font-family:"AkkuratLight","Helvetica Neue",Helvetica,Arial,sans-serif}.three-columns-two-rows{background-color:#FFFFFF;font-size:10px}
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+.responsive-gutters > [class*='col-'] {
+  padding-right: 1px;
+  padding-left: 1px;
+  /* Custom, iPhone Retina */
+  /* Extra Small Devices, Phones */
+  /* Small Devices, Tablets */
+  /* Medium Devices, Desktops */
+  /* Large Devices, Wide Screens */
+}
+@media only screen and (min-width: 320px) {
+  .responsive-gutters > [class*='col-'] {
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .responsive-gutters > [class*='col-'] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .responsive-gutters > [class*='col-'] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .responsive-gutters > [class*='col-'] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .responsive-gutters > [class*='col-'] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+@font-face {
+  font-family: 'AkkuratLight';
+  src: url('Akkurat-Light.ttf') format('ttf'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ url('Akkurat-Light.ttf') format('truetype');
+  
+  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+body {
+  background-color: lightgrey;
+  height: 100%;
+  font-family: "AkkuratLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.three-columns-two-rows {
+  background-color: #FFFFFF;
+  font-size: 10px;
+  /*max-width: 1202px;*/
+}

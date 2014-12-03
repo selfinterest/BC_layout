@@ -1,14 +1,11 @@
-<div class="top row">
-    <div class="col-xs-12 hidden-xs hidden-ms hidden-sm">
+<div class="row">
+    <div class="col-ms-4 col-sm-4 col-md-5 col-lg-12 col-ms-2 hidden-xs top">
         <img class="container-sized img-responsive"  ng-src="{{ img }}"/>
+        <div class="module-label">
+            <h6>Featured insight</h6>
+        </div>
     </div>
-</div>
-<div class="bottom row">
-    <div class="bottom-left hidden-lg hidden-md hidden-xs col-xs-4">
-        <!-- lower left image -->
-       <img class="container-sized img-responsive" ng-src="{{ img }}"/>
-    </div>
-    <div class="bottom-right col-xs-8 col-md-12">
+    <div class="col-ms-8 col-sm-8 col-md-7 col-lg-12 bottom">
         <h3 class="feature type">{{ type }}</h3>
         <h5 class="feature title">{{ title }}</h5>
         <p class="feature text">{{ text }}</p>
@@ -16,26 +13,7 @@
             Read more &gt
         </span>
     </div>
+    <!-- <div class="col-xs-12 hidden-xs hidden-ms hidden-sm">
+        <img class="container-sized img-responsive"  ng-src="{{ img }}"/>
+    </div> -->
 </div>
-<div class="controls row">
-    <div class="col-xs-12">
-        <div class="row">
-            <div class="col-xs-12">
-                <div style="width: 40px; margin: 0 auto;">
-                    <a href="" class="btn btn-link" ng-click="collapse = !collapse">
-                        <span class="glyphicon glyphicon-chevron-down"></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row secondary"  collapse="collapse">
-            <div class="col-xs-12" style="background-color:#FFFFFF;">
-                <ul>
-                    <li>Something</li>
-                    <li>Stupid</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-

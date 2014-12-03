@@ -8,6 +8,6 @@ var express = require("express")
 
 var app = express();
 
-app.use(lessMiddleware(__dirname + "/public"));
+app.use(lessMiddleware(__dirname + "/public", {compiler: {compress: false}}));
 app.use(express.static(__dirname + '/public'));
 app.listen(3000);

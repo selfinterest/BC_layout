@@ -1,218 +1,213 @@
 @import "../bootstrap3/less/variables";
 @import "utility";
 
-//@split-box-height: 370px;
-//@split-box-width: @split-box-height * @golden-ratio;
-
-@control-row-max-height: 15px;
-@control-row-min-height: 10px;
-
 .split-box {
-
     background-color: #696969;
-    max-height: 385px;
+    max-height: 370px;
 
-    //margin: 8px;    //default margin
-
-    /*@media(min-width: 992px) and (max-width: 1199px){ //this is the two column size
-        margin: 5px;
-    }
-
-    @media(min-width: @screen-xs-max) and (max-width: @screen-sm-max) { //single column size, with picture
-        margin: 3px;
-    }
-
-    @media(max-width: @screen-xs-max) { //single column size, no picture
-        margin: 1px;
-    }*/
-
-
-    > .top {
-        height: 50%;
-
+    .top {
         img {
             max-height: 180px;
-            width: 100%;
-            height: auto;
-
-        }
-    }
-
-    > .bottom {
-        height: 50%;
-        max-height: 180px;
-
-        //Above 992px (i.e. in multi column mode, set the min-height
-        @media(min-width: 992px){
-            min-height: 180px;           //TODO: adjust for actual width
+            height: 100%;
         }
 
+        .module-label {
+            position: absolute;
+            top: 157px;
+            z-index: 10;
 
-    }
-
-
-    @media(min-width: 481px) and (max-width: 992px){
-        > .bottom {
-            img {  //The bottom image only shows up at these dimensions
-                height: 180px; //This parameter may need adjustment. It's the height of the container when there is stuff in it.
-                min-height: 180px;
-                max-height: 180px;
-                width: auto;
+            h6 {
+                text-transform: uppercase;
+                font-weight: bold;
+                background-color: #3399FF;
+                opacity: 0.8;
+                color: #FFFFFF;
             }
         }
     }
 
-    @media (max-width: @screen-xs-max) and (min-width: @screen-xs-min) {
-        height: 100%;
-        max-height: 100%;
-        > .top {
-            height: 0;
-            max-height: 0;
+
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width : 320px) {
+
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+        //margin-bottom: 15px;
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+        .bottom {
+            min-height: 180px;
         }
 
-        > .bottom {
-            height: 100%;
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+        .top {
+            img {
+                width: 100%;
+            }
         }
     }
 
-    .controls {
-        //max-height: @control-row-max-height;
-        //min-height: @control-row-min-height;
-        //z-index: 1;
-        //padding-top: 10px;
-        font-size: 16px;
-        .controls-row {
-            background-color: #696969;
-        }
+}
 
-        .secondary {
-            position: absolute;
-            //top: 390px;
-            z-index: 10;    //this ensures the secondary display goes on top of whatever is below it (e.g. other split boxes.)
+.secondary-display-controls {
+
+
+    .secondary-display-control {
+
+
+        /* Custom, iPhone Retina */
+        @media only screen and (min-width : 320px) {
 
         }
 
-        //padding-bottom: 10px;
+        /* Extra Small Devices, Phones */
+        @media only screen and (min-width : 480px) {
+
+        }
+
+        /* Small Devices, Tablets */
+        @media only screen and (min-width : 768px) {
+
+        }
+
+        /* Medium Devices, Desktops */
+        @media only screen and (min-width : 992px) {
+            top: 0;
+        }
+
+        /* Large Devices, Wide Screens */
+        @media only screen and (min-width : 1200px) {
+
+        }
+
+
+        @media only screen and (min-width: 480px) and (max-width: 992px) {
+
+        }
+
+        .btn-responsive {
+            padding: 0;
+        }
+
+
     }
 
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width : 320px) {
+
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        top: 0;
+        margin-top: 0;
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
 
 }
 
-//.split-box > .top {
-//    height: 50%;
-//}
-//
-//.split-box > .bottom {
-//    height: 50%;
-//}
-////On phones and tablets in portrait mode, simply hide the top of the split box and cut the split box height by 50%
-///*@media (max-width: @screen-xs-max) and (min-width: @screen-xs-min) {
-//    .split-box {
-//        height: @split-box-height / 2;
-//        max-height: @split-box-height / 2;
-//        margin-bottom: 5px;
-//    }
-//    .split-box > .top {
-//        height: 0;
-//    }
-//
-//    .split-box > .bottom {
-//        height: 100%;
-//    }
-//}*/
-//
-//
-//.column > .split {
-//
-//}
-//
-//.split > div {
-//    /*height: 50%;*/
-//}
-//.split > .top {
-//    /*height: 1em;
-//    max-height: 1em;*/
-//    height: 100%;
-//}
-//
-//.top > img {
-//    width: 100%;
-//    height: 100%;
-//}
-//
-//img.container-sized {
-//    /*max-width: 100%;
-//    max-height: 100%;*/
-//}
-//
-//.darkblue {
-//    background-color: #71afff;
-//}
-//
-//.grey {
-//    background-color: #777777;
-//}
-//
-//.blue {
-//    background-color: #85bdff;
-//}
-//
-//.feature {
-//    margin: 0;
-//}
-//.feature.type {
-//    text-transform: uppercase;
-//    font-size: .75em;
-//    line-height: 1.2em;
-//}
-//
-//.feature.title {
-//    text-transform: uppercase;
-//    font-size: 1.5em;
-//}
-//
-//.feature.text {
-//    font-size: .875em;
-//    color: #CCCCCC;
-//}
-//
-//.feature.read-more {
-//    font-size: .5em;
-//}
+.secondary-display-content {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
 
 
+    ul {
 
-//Utilities
-/*  .with-top-margin {
-@media (min-width: 1200px) {
-    margin-top: 10px
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        > li {
+            border-top: 1px #FFFFFF solid;
+
+        }
+    }
+    .secondary-display-list-container {
+        background-color: #D6E7F1;      //this should be customized for each list
+        /* Custom, iPhone Retina */
+        @media only screen and (min-width : 320px) {
+
+        }
+
+        /* Extra Small Devices, Phones */
+        @media only screen and (min-width : 480px) {
+
+        }
+
+        /* Small Devices, Tablets */
+        @media only screen and (min-width : 768px) {
+
+        }
+
+        /* Medium Devices, Desktops */
+        @media only screen and (min-width : 992px) {
+
+        }
+
+        /* Large Devices, Wide Screens */
+        @media only screen and (min-width : 1200px) {
+
+        }
+        //margin-left: -8px;
+        //margin-right: -8px;
+    }
 }
+.secondary-display {
+    z-index: 10;
+    background-color: #FFFFFF;
+    margin-top: 10px;
 
 
-@media (min-width: @screen-sm-max) and (max-width: @screen-md-min) {
-    margin-top: @grid-gutter-width;
-}
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width : 320px) {
 
-//No top margin on phones because columns will be stacked
-@media (max-width: @screen-sm-max) {
-    margin-top: 0;
-}
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
 
 }
-
-.with-bottom-margin {
-@media (min-width: 1200px) {
-    margin-bottom: 10px;
-}
-
-
-@media (min-width: 768px) and (max-width: 979px) {
-    margin-bottom: @grid-gutter-width;
-}
-
-//No top margin on phones because columns will be stacked
-@media (max-width: 767px) {
-    margin-bottom: 0;
-}
-
-}*/
