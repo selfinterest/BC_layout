@@ -5,6 +5,13 @@
     background-color: #696969;
     max-height: 370px;
 
+    .bottom-container {
+        min-height: 180px;
+        @media (min-width: 481px) and (max-width: 1199px) {
+            margin-left: -30px;
+        }
+    }
+
     .top {
         img {
             max-height: 180px;
@@ -14,7 +21,7 @@
         .module-label {
             position: absolute;
             top: 157px;
-            z-index: 10;
+            z-index: 9;     //this is 1 less than the secondary display
 
             h6 {
                 text-transform: uppercase;
@@ -107,12 +114,7 @@
         }
 
         .secondary-display-control-container {
-           // border-bottom: 1px solid white;
-            //background-color: #D6E7F1;
-            //> a {
-            //    background-color: #3399FF;
-           //     color: #FFFFFF;
-            //}
+
         }
 
     }
