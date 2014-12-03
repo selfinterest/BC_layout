@@ -45,6 +45,7 @@ body {
         @media (min-width: 481px) and (max-width: 1199px) {
             margin-left: -30px;
         }
+
     }
 
 
@@ -52,12 +53,21 @@ body {
         background-color: @color;
     }
     .secondary-display-control-container-collapsed {
-
+        @media (max-width: 480px){
+            background-color: @color;
+        }
     }
 
     .secondary-display-list-container {
         background-color: @color;
+        ul > li {
+            @media (max-width: 480px){
+                padding: 5px;
+            }
+
+        }
     }
+
 
 }
 
