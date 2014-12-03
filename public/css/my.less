@@ -23,6 +23,43 @@ body {
     /*max-width: 1202px;*/
 }
 
+.featured-insight {
+    .feature(#D6E7F1);
+}
+
+.featured-video {
+    .feature(#DEDEDE);
+}
+
+
+.featured-literature {
+    .feature(#C0D1E6);
+}
+
+
+//MIXINS
+.feature(@color) {
+    .bottom-container {
+        background-color: @color;
+        min-height: 180px;
+        @media (min-width: 481px) and (max-width: 1199px) {
+            margin-left: -30px;
+        }
+    }
+
+
+    .secondary-display-control-container {
+        background-color: @color;
+    }
+    .secondary-display-control-container-collapsed {
+
+    }
+
+    .secondary-display-list-container {
+        background-color: @color;
+    }
+
+}
 
 
 
