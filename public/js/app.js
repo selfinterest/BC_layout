@@ -5,7 +5,7 @@ angular.module("TestApp", ["ui.bootstrap"])
     .directive("splitBox", [function(){
         return {
             restrict: "C",
-            templateUrl: "/templates/split-box.html",
+            templateUrl: "split-box.html",
             scope: {
                 type: "@",
                 title: "@",
@@ -23,7 +23,7 @@ angular.module("TestApp", ["ui.bootstrap"])
         return {
             restrict: "C",
             scope: true,
-            templateUrl: "/templates/secondary-display-controls.html",
+            templateUrl: "secondary-display-controls.html",
             link: function(scope, element, attr){
                 scope.collapse = true;
             }

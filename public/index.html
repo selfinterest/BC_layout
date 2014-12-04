@@ -26,6 +26,85 @@
 </head>
 <body>
     <div id="application" class="container three-columns-two-rows">
+        <script type="text/ng-template" id="split-box.html">
+            <div class="row">
+                <div class="col-sm-4 col-md-5 col-lg-12  top hidden-ms">
+                    <div class="image-container">
+                        <img class="container-sized img-responsive"  ng-src="{{ img }}"/>
+                        <div class="module-label">
+                            <h6>{{type}}</h6>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-8 col-md-7 col-lg-12 bottom">
+                    <div class="bottom-container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h1 class="title">{{ title }}</h1>
+                                <h2>July 2014</h2>
+                                <p class="text lead">{{ text }}</p>
+                            </div>
+                        </div>
+                        <div class="row action-link-container">
+                            <div class="col-xs-5 pull-right" >
+                                <a class="action-link" href="">Action link &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <script type="text/ng-template" id="secondary-display-controls.html">
+            <div class="col-xs-12">
+                <div class="row secondary-display-control">
+                    <div class="col-xs-12" style="text-align: center;">
+                        <div ng-class="{'secondary-display-control-container-collapsed': collapse, 'secondary-display-control-container': !collapse}" >
+                            <a href="" class="btn btn-link btn-lg" ng-click="collapse = !collapse">
+                                <span class="glyphicon" ng-class="{'glyphicon-chevron-down': collapse, 'glyphicon-chevron-up': !collapse}"></span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row secondary-display-content" collapse="collapse">
+                    <div class="col-xs-12">
+                        <div class="secondary-display-list-container">
+                            <ul>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-sm-4 hidden-xs hidden-ms">
+                                            <img class="img-responsive" src="http://placekitten.com/370/180"/>
+                                        </div>
+                                        <div class="col-sm-8 col-ms-12 col-xs-12">
+                                            Some kitten
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-sm-4 hidden-xs hidden-ms">
+                                            <img class="img-responsive" src="http://placekitten.com/370/180"/>
+                                        </div>
+                                        <div class="col-sm-8 col-ms-12 col-xs-12">
+                                            Some kitten
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-xs-5 col-xs-offset-7 pull-right">
+                                            <a class="action-link" href="">Action link &gt;</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </script>
         <div class="row no-gutter responsive-gutters">
             <div class="col-xs-12 col-md-6 col-lg-4 feature">
                 <div class="split-box featured-insight" type="Featured insight" title="Shedding light on China's shadow banking" text="Changes in China's financial system have raised concerns over the use of trusts and their potential risks." img="http://placekitten.com/370/180" style=""></div>
@@ -57,11 +136,13 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-6 col-lg-4">
-                <div class="box-container">
+                <div class="box-container strategies-container">
                     <div class="banner">
                         <p>Strategies</p>
                     </div>
-                    <h2>Large cap growth equity</h2>
+                    <div>
+                        <h2>Large cap growth equity</h2>
+                    </div>
                     <div class="action-link-container">
                         <a href="" class="action-link">Action link &gt;</a>
                     </div>
@@ -81,16 +162,6 @@
                     </div>
                 </div>
             </div>
-
-           <!-- <div class="col-xs-12 col-md-6 col-lg-4">
-                <div class="split-box" type="Featured kitten" title="One line title goes here" text="BLAH BLAH BLAH" img="http://placekitten.com/370/180"></div>
-            </div>
-            <div class="col-xs-12 col-md-6 col-lg-4">
-                <div class="split-box" type="Featured kitten" title="One line title goes here" text="BLAH BLAH BLAH" img="http://placekitten.com/370/180"></div>
-            </div>
-            <div class="col-xs-12 col-md-6 col-lg-4">
-                <div class="split-box" type="Featured kitten" title="One line title goes here" text="BLAH BLAH BLAH" img="http://placekitten.com/370/180"></div>
-            </div> -->
         </div> <!-- /row -->
     </div><!-- /container -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -98,81 +169,6 @@
     <!-- <script src="/bootstrap3/dist/js/bootstrap.min.js"></script> -->
     <script src="/js/ui-bootstrap.min.js"></script>
     <script src="/js/app.js"></script>
-    <script type="text/ng-template" id="/templates/split-box.html">
-        <div class="row">
-            <div class="col-ms-4 col-sm-4 col-md-5 col-lg-12 col-ms-2 hidden-xs top">
-                <img class="container-sized img-responsive"  ng-src="{{ img }}"/>
-                <div class="module-label">
-                    <h6>{{type}}</h6>
-                </div>
-            </div>
-            <div class="col-ms-8 col-sm-8 col-md-7 col-lg-12 bottom">
-                <div class="bottom-container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <h1 class="title">{{ title }}</h1>
-                            <h2>July 2014</h2>
-                            <p class="text lead">{{ text }}</p>
-                        </div>
-                    </div>
-                    <div class="row action-link-container">
-                        <div class="col-xs-5 pull-right" >
-                            <a class="action-link" href="">Action link &gt;</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </script>
-    <script type="text/ng-template" id="/templates/secondary-display-controls.html">
-        <div class="col-xs-12">
-            <div class="row secondary-display-control">
-                <div class="col-xs-12" style="text-align: center;">
-                    <div ng-class="{'secondary-display-control-container-collapsed': collapse, 'secondary-display-control-container': !collapse}" >
-                        <a href="" class="btn btn-link btn-lg" ng-click="collapse = !collapse">
-                            <span class="glyphicon" ng-class="{'glyphicon-chevron-down': collapse, 'glyphicon-chevron-up': !collapse}"></span>
-                        </a>
-                    </div>
 
-                </div>
-            </div>
-            <div class="row secondary-display-content" collapse="collapse">
-                <div class="col-xs-12">
-                    <div class="secondary-display-list-container">
-                        <ul>
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-4 hidden-xs hidden-ms">
-                                        <img class="img-responsive" src="http://placekitten.com/370/180"/>
-                                    </div>
-                                    <div class="col-sm-8 col-ms-12 col-xs-12">
-                                        Some kitten
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-4 hidden-xs hidden-ms">
-                                        <img class="img-responsive" src="http://placekitten.com/370/180"/>
-                                    </div>
-                                    <div class="col-sm-8 col-ms-12 col-xs-12">
-                                        Some kitten
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="col-xs-4 col-xs-offset-8 pull-right">
-                                        <a class="action-link" href="">Action link &gt;</a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </script>
 </body>
 </html>
