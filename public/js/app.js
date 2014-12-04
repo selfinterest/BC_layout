@@ -31,3 +31,7 @@ angular.module("TestApp", ["ui.bootstrap"])
 
     }])
 ;
+
+angular.element(document).ready(function() {
+    angular.bootstrap(angular.element("#application"), ['TestApp']);
+});

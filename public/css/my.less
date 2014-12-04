@@ -112,6 +112,14 @@ body {
         margin-top: 0;
     }
 
+    .action-link-container {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        clear: both;
+        left: 1px;    //cancels out the padding
+    }
+
 
 }
 
@@ -128,6 +136,33 @@ body {
     @media only screen and (min-width : 320px) {
         background: #dedede none;
     }
+
+    @media only screen and (min-width : 1200px) {
+        .message {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            background-color: rgba(2,0,49,0.5);
+            padding-left: 15px;
+            padding-right: 15px;
+            //opacity: 0.6;
+
+            h1.message-text {
+                //opacity: 1.0;
+                font-family: "AkkuratPro", "Helvetica Neue", Helvetica, Arial;
+                color: #FFFFFF;
+                font-size:1.5em;
+            }
+
+            p.message-text {
+                font-size: 0.875em;
+                color: #666666;
+            }
+        }
+    }
+
 }
 .ceo-container {
     max-height: 370px;
@@ -138,13 +173,6 @@ body {
     padding-right: 15px;
 
 
-    .action-link-container {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        clear: both;
-        left: 1px;    //cancels out the padding
-    }
 
 
 
@@ -160,28 +188,10 @@ body {
         position: relative;
         min-height: 370px;
         margin-top: 0;
-        .ceo-message {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 50%;
-            width: 100%;
-            background-color: rgba(2,0,49,0.5);
-            padding-left: 15px;
-            padding-right: 15px;
-            //opacity: 0.6;
-        }
-        h1.ceo-message-text {
-            //opacity: 1.0;
-            font-family: "AkkuratPro", "Helvetica Neue", Helvetica, Arial;
-            color: #FFFFFF;
-            font-size:1.5em;
-        }
 
-        p.ceo-message-text {
-            font-size: 0.875em;
-            color: #666666;
-        }
+
+
+
     }
 
 
@@ -190,9 +200,15 @@ body {
 .careers-container {
     padding-left: 15px;
     padding-right: 15px;
+
+
     @media only screen and (min-width : 1200px) {
-        background: url("/img/ceo.jpg") no-repeat;
+        background: url("/img/interviews2.jpg") no-repeat;
         background-size: 100% 100%;
+
+        .message {
+            background-color: rgba(100,100,100,0.5);
+        }
     }
 }
 

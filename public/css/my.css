@@ -153,6 +153,13 @@ body {
     margin-top: 0;
   }
 }
+.box-container .action-link-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  clear: both;
+  left: 1px;
+}
 .background-image-container .banner {
   background-color: transparent;
   margin-left: -10px;
@@ -165,6 +172,27 @@ body {
     background: #dedede none;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .background-image-container .message {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background-color: rgba(2, 0, 49, 0.5);
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .background-image-container .message h1.message-text {
+    font-family: "AkkuratPro", "Helvetica Neue", Helvetica, Arial;
+    color: #FFFFFF;
+    font-size: 1.5em;
+  }
+  .background-image-container .message p.message-text {
+    font-size: 0.875em;
+    color: #666666;
+  }
+}
 .ceo-container {
   max-height: 370px;
   min-height: 180px;
@@ -175,13 +203,6 @@ body {
   /* Extra Small Devices, Phones */
   /* Large Devices, Wide Screens */
 }
-.ceo-container .action-link-container {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  clear: both;
-  left: 1px;
-}
 @media only screen and (min-width: 1200px) {
   .ceo-container {
     background: url("/img/ceo.jpg") no-repeat;
@@ -190,25 +211,6 @@ body {
     min-height: 370px;
     margin-top: 0;
   }
-  .ceo-container .ceo-message {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 50%;
-    width: 100%;
-    background-color: rgba(2, 0, 49, 0.5);
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .ceo-container h1.ceo-message-text {
-    font-family: "AkkuratPro", "Helvetica Neue", Helvetica, Arial;
-    color: #FFFFFF;
-    font-size: 1.5em;
-  }
-  .ceo-container p.ceo-message-text {
-    font-size: 0.875em;
-    color: #666666;
-  }
 }
 .careers-container {
   padding-left: 15px;
@@ -216,8 +218,11 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .careers-container {
-    background: url("/img/ceo.jpg") no-repeat;
+    background: url("/img/interviews2.jpg") no-repeat;
     background-size: 100% 100%;
+  }
+  .careers-container .message {
+    background-color: rgba(100, 100, 100, 0.5);
   }
 }
 .feature {
