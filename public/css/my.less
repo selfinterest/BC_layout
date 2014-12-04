@@ -83,6 +83,9 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 
+    .banner {
+        background-color: transparent;
+    }
     .action-link-container {
         position: absolute;
         bottom: 0;
@@ -134,7 +137,45 @@ body {
 
 }
 
+.box-container {
+    max-height: 370px;
+    min-height: 180px;
+    position: relative;
+    width: 100%;
 
+
+    .banner {
+        background-color: #CCCCCC;
+        padding-left: 15px;
+    }
+    .banner > p {
+        text-transform: uppercase;
+        line-height: 1.5;
+        color: #FFFFFF;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 1.85em;
+    }
+
+    @media only screen and (min-width : 320px) {
+        //background: #dedede none;
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+        //margin-top: -20px;
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+        min-height: 370px;
+        margin-top: 0;
+    }
+
+
+}
 
 //MIXINS
 .feature(@color) {
