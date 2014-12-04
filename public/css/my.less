@@ -76,14 +76,37 @@ body {
 }
 
 .ceo-container {
+    max-height: 370px;
+    min-height: 180px;
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .action-link-container {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        clear: both;
+        left: 1px;    //cancels out the padding
+    }
+
+    @media only screen and (min-width : 320px) {
+        background: #dedede none;
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+        margin-top: -20px;
+    }
+
     /* Large Devices, Wide Screens */
     @media only screen and (min-width : 1200px) {
-        height: 370px;
-        width: 100%;
         background: url("/img/ceo.jpg") no-repeat;
         background-size: 100% 100%;
         position: relative;
-
+        min-height: 370px;
+        margin-top: 0;
         .ceo-message {
             position: absolute;
             bottom: 0;
@@ -108,53 +131,10 @@ body {
         }
     }
 
+
 }
-.ceo {
-    /* Custom, iPhone Retina */
-    @media only screen and (min-width : 320px) {
-
-    }
-
-    /* Extra Small Devices, Phones */
-    @media only screen and (min-width : 480px) {
-
-    }
-
-    /* Small Devices, Tablets */
-    @media only screen and (min-width : 768px) {
-
-    }
-
-    /* Medium Devices, Desktops */
-    @media only screen and (min-width : 992px) {
-
-    }
-
-    /* Large Devices, Wide Screens */
-    @media only screen and (min-width : 1200px) {
-       /* height: 370px;
-        width: 100%;
-        background: url("/img/ceo.jpg") no-repeat;
-        background-size: 100% 100%;
-
-        .ceo-message {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 50%;
-            width: 100%;
-            background-color: #020031;
-            opacity: 0.6;
-            background-clip:padding-box;
-        }*/
-    }
 
 
-
-
-    //max-height: 370px;
-    //max-width: 360px;
-}
 
 //MIXINS
 .feature(@color) {
