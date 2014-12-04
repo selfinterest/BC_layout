@@ -126,6 +126,45 @@ body {
   font-weight: bolder;
   font-size: .875em;
 }
+.box-container {
+  max-height: 370px;
+  min-height: 180px;
+  position: relative;
+  width: 100%;
+  /* Extra Small Devices, Phones */
+  /* Large Devices, Wide Screens */
+}
+.box-container .banner {
+  background-color: #CCCCCC;
+  padding-left: 15px;
+}
+.box-container .banner > p {
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+.box-container h2 {
+  text-transform: uppercase;
+  font-size: 1.85em;
+}
+@media only screen and (min-width: 1200px) {
+  .box-container {
+    min-height: 370px;
+    margin-top: 0;
+  }
+}
+.background-image-container .banner {
+  background-color: transparent;
+  margin-left: -10px;
+}
+.background-image-container .banner p {
+  color: #b0b0b0;
+}
+@media only screen and (min-width: 320px) {
+  .background-image-container {
+    background: #dedede none;
+  }
+}
 .ceo-container {
   max-height: 370px;
   min-height: 180px;
@@ -136,25 +175,12 @@ body {
   /* Extra Small Devices, Phones */
   /* Large Devices, Wide Screens */
 }
-.ceo-container .banner {
-  background-color: transparent;
-}
 .ceo-container .action-link-container {
   position: absolute;
   bottom: 0;
   width: 100%;
   clear: both;
   left: 1px;
-}
-@media only screen and (min-width: 320px) {
-  .ceo-container {
-    background: #dedede none;
-  }
-}
-@media only screen and (min-width: 480px) {
-  .ceo-container {
-    margin-top: -20px;
-  }
 }
 @media only screen and (min-width: 1200px) {
   .ceo-container {
@@ -184,31 +210,14 @@ body {
     color: #666666;
   }
 }
-.box-container {
-  max-height: 370px;
-  min-height: 180px;
-  position: relative;
-  width: 100%;
-  /* Extra Small Devices, Phones */
-  /* Large Devices, Wide Screens */
-}
-.box-container .banner {
-  background-color: #CCCCCC;
+.careers-container {
   padding-left: 15px;
-}
-.box-container .banner > p {
-  text-transform: uppercase;
-  line-height: 1.5;
-  color: #FFFFFF;
-}
-.box-container h2 {
-  text-transform: uppercase;
-  font-size: 1.85em;
+  padding-right: 15px;
 }
 @media only screen and (min-width: 1200px) {
-  .box-container {
-    min-height: 370px;
-    margin-top: 0;
+  .careers-container {
+    background: url("/img/ceo.jpg") no-repeat;
+    background-size: 100% 100%;
   }
 }
 .feature {
