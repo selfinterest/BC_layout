@@ -58,7 +58,21 @@ body {
 }
 .three-columns-two-rows {
   background-color: #FFFFFF;
-  font-size: 10px;
+  /* Custom, iPhone Retina */
+  /* Extra Small Devices, Phones */
+  /* Small Devices, Tablets */
+  /* Medium Devices, Desktops */
+  /* Large Devices, Wide Screens */
+}
+@media only screen and (min-width: 992px) {
+  .three-columns-two-rows {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .three-columns-two-rows {
+    font-size: 16px;
+  }
 }
 .featured-insight .bottom-container {
   background-color: #d6e7f1;
@@ -106,4 +120,40 @@ body {
   float: right;
   text-transform: uppercase;
   font-weight: bolder;
+  font-size: .875em;
+}
+.feature {
+  /* Custom, iPhone Retina */
+  /* Extra Small Devices, Phones */
+  /* Small Devices, Tablets */
+  /* Medium Devices, Desktops */
+  /* Large Devices, Wide Screens */
+}
+.feature h1 {
+  text-transform: uppercase;
+  color: #21314D;
+  font-size: 1.5em;
+  line-height: 1.2px;
+  display: inline;
+}
+.feature h2 {
+  color: #21314d;
+  text-align: right;
+  font-size: 0.875em;
+}
+.feature p {
+  color: #666666;
+  font-size: 0.875em;
+}
+@media only screen and (min-width: 1200px) {
+  .feature h1 {
+    font-size: 1.5em;
+    line-height: 1.2px;
+  }
+  .feature h2 {
+    font-size: 0.875em;
+  }
+  .feature p {
+    font-size: 0.875em;
+  }
 }

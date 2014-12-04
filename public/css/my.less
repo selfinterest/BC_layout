@@ -18,7 +18,32 @@ body {
 .three-columns-two-rows {
     background-color: #FFFFFF;
     //padding: 10px;
-    font-size: 10px;
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width : 320px) {
+
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        font-size: 14px;
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+        font-size: 16px;
+    }
+
+    //font-size: 18px;
 
 
 }
@@ -40,6 +65,8 @@ body {
     float: right;
     text-transform: uppercase;
     font-weight: bolder;
+    font-size: .875em;
+    //color: #00B2EF;
 }
 
 //MIXINS
@@ -68,5 +95,70 @@ body {
 
 }
 
+.feature {
+    h1 {
+        text-transform: uppercase;
+        color: #21314D;
+        font-size: 1.5em;
+        line-height: 1.2px;
+        display: inline;
+    }
+
+    h2 {
+        color: #21314d;
+        text-align: right;
+        font-size: 0.875em;
+    }
+
+    p {
+        color: #666666;
+        font-size: 0.875em;
+
+    }
+
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width : 320px) {
+
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+
+    }
+
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+        h1 {
+
+            font-size: 1.5em;
+            line-height: 1.2px;
+
+        }
+
+        h2 {
+            font-size: 0.875em;
+
+        }
+
+        p {
+            font-size: 0.875em;
+
+        }
+    }
+
+
+
+}
 
 
