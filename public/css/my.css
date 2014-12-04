@@ -253,6 +253,15 @@ body {
   /* Medium Devices, Desktops */
   /* Large Devices, Wide Screens */
 }
+.feature h1,
+.feature h2,
+.feature h3,
+.feature h4,
+.feature h5,
+.feature h6 {
+  margin: 0;
+  line-height: 1.0em;
+}
 .feature h1 {
   text-transform: uppercase;
   color: #21314D;
@@ -272,7 +281,7 @@ body {
 @media only screen and (min-width: 1200px) {
   .feature h1 {
     font-size: 1.5em;
-    line-height: 1.2px;
+    line-height: 1.2em;
   }
   .feature h2 {
     font-size: 0.875em;

@@ -5,6 +5,20 @@
     background-color: #696969;
     max-height: 370px;
 
+
+    .top {
+        @media (min-width: 768px) and (max-width: 1199px){
+            //no gutters
+            padding-right: 0;
+
+        }
+    }
+
+    .bottom {
+        @media (min-width: 768px) and (max-width: 1199px){
+            padding-left: 0;
+        }
+    }
     .bottom-container {
         min-height: 180px;
         padding: 5px;
@@ -20,8 +34,9 @@
     .top {
 
         .image-container {
+            height: auto;
             @media (max-width: 1199px){
-                width: 255px;
+                //width: 255px;
             }
         }
         /*@media(min-width: 769px){
@@ -39,7 +54,8 @@
 
         .module-label {
             position: absolute;
-            top: 157px;
+            bottom: 0;
+            //top: 157px;
             z-index: 9;     //this is 1 less than the secondary display
 
             h6 {
