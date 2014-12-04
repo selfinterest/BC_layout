@@ -9,6 +9,12 @@
     url('Akkurat-Light.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
+@font-face {
+    font-family: 'AkkuratPro';
+    src: url('AkkuratPro-Regular.otf') format('opentype');
+    //url:('AkkuratPro-Regular.otf') format('opentype');
+}
+
 body {
     background-color: lightgrey;
     height: 100%;
@@ -67,6 +73,87 @@ body {
     font-weight: bolder;
     font-size: .875em;
     //color: #00B2EF;
+}
+
+.ceo-container {
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+        height: 370px;
+        width: 100%;
+        background: url("/img/ceo.jpg") no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+
+        .ceo-message {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            background-color: rgba(2,0,49,0.5);
+            padding-left: 15px;
+            padding-right: 15px;
+            //opacity: 0.6;
+        }
+        h1.ceo-message-text {
+            //opacity: 1.0;
+            font-family: "AkkuratPro", "Helvetica Neue", Helvetica, Arial;
+            color: #FFFFFF;
+            font-size:1.5em;
+        }
+
+        p.ceo-message-text {
+            font-size: 0.875em;
+            color: #666666;
+        }
+    }
+
+}
+.ceo {
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width : 320px) {
+
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+       /* height: 370px;
+        width: 100%;
+        background: url("/img/ceo.jpg") no-repeat;
+        background-size: 100% 100%;
+
+        .ceo-message {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            background-color: #020031;
+            opacity: 0.6;
+            background-clip:padding-box;
+        }*/
+    }
+
+
+
+
+    //max-height: 370px;
+    //max-width: 360px;
 }
 
 //MIXINS
