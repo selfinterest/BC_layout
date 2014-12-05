@@ -25,20 +25,17 @@
 }
 @media only screen and (min-width: 768px) {
   .responsive-gutters > [class*='col-'] {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 8px;
   }
 }
 @media only screen and (min-width: 992px) {
   .responsive-gutters > [class*='col-'] {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 10px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .responsive-gutters > [class*='col-'] {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 15px;
   }
 }
 .col-centered {
@@ -266,12 +263,6 @@ body {
 .feature p {
   color: #666666;
   font-size: 0.875em;
-}
-@media only screen and (min-width: 992px) {
-  .feature {
-    padding-bottom: 8px;
-    padding-top: 8px;
-  }
 }
 @media only screen and (min-width: 1200px) {
   .feature h1 {
