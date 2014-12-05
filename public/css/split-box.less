@@ -122,7 +122,8 @@
 }
 
 .secondary-display-controls {
-    margin-bottom: -22px;
+    //This is the height of the secondary-display-container
+
     //top: 20px;
     //position: relative;
     .secondary-display-control {
@@ -146,7 +147,7 @@
 
         /* Medium Devices, Desktops */
         @media only screen and (min-width : 992px) {
-            top: 0;
+
         }
 
         /* Large Devices, Wide Screens */
@@ -172,10 +173,10 @@
         }
 
     }
-
+    //margin-top: -20px;
     /* Custom, iPhone Retina */
     @media only screen and (min-width : 320px) {
-
+        margin-top: -20px;
     }
 
     /* Extra Small Devices, Phones */
@@ -190,8 +191,11 @@
 
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 992px) {
-        top: 0;
-        margin-top: 0;
+        //top: 0;
+        //margin-top: -20px;
+        //Should be equal to the gutter space
+        margin-top: 0px;
+       margin-bottom: -20px;       //this moves the control up so that it doesn't take up extra space
     }
 
     /* Large Devices, Wide Screens */
