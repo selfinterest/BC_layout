@@ -231,20 +231,9 @@ body {
 }
 .strategies-container {
   /* Extra Small Devices, Phones */
-  margin-top: 15px;
   /* Extra Small Devices, Phones */
   /* Small Devices, Tablets */
   /* Medium Devices, Desktops */
-}
-@media only screen and (min-width: 992px) {
-  .strategies-container {
-    margin-top: 0;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .strategies-container {
-    margin-top: 0;
-  }
 }
 .feature {
   /* Custom, iPhone Retina */
@@ -277,6 +266,12 @@ body {
 .feature p {
   color: #666666;
   font-size: 0.875em;
+}
+@media only screen and (min-width: 992px) {
+  .feature {
+    padding-bottom: 8px;
+    padding-top: 8px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .feature h1 {
