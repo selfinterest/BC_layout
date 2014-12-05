@@ -2,7 +2,7 @@
   "name": "BostonCompanyLayout",
   "version": "0.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "server.js",
   "dependencies": {
     "express": "^4.10.2",
     "less-middleware": "^1.0.4",
@@ -10,7 +10,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "supervisor server.js"
   },
   "repository": {
     "type": "git",
