@@ -25,26 +25,23 @@
 
   /* Small Devices, Tablets */
   @media only screen and (min-width : 768px) {
-    padding-left: 8px;
-    padding-right: 8px;
+    .make-responsive-gutters(4px);
   }
 
   /* Medium Devices, Desktops */
   @media only screen and (min-width : 992px) {
-    padding-left: 8px;
-    padding-right: 8px;
+    .make-responsive-gutters(10px);
   }
 
   /* Large Devices, Wide Screens */
   @media only screen and (min-width : 1200px) {
-    padding-left: 8px;
-    padding-right: 8px;
+    .make-responsive-gutters(15px);
   }
 
 }
 
-.make-responsive-gutters(@class){
-  
+.make-responsive-gutters(@padding-all){
+  padding: @padding-all;
 }
 
 .col-centered{
