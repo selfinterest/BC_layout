@@ -1,0 +1,177 @@
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+.responsive-gutters > [class*='col-'] {
+  padding-right: 1px;
+  padding-left: 1px;
+  /* Custom, iPhone Retina */
+  /* Extra Small Devices, Phones */
+  /* Small Devices, Tablets */
+  /* Medium Devices, Desktops */
+  /* Large Devices, Wide Screens */
+}
+@media only screen and (min-width: 320px) {
+  .responsive-gutters > [class*='col-'] {
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .responsive-gutters > [class*='col-'] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .responsive-gutters > [class*='col-'] {
+    padding: 4px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .responsive-gutters > [class*='col-'] {
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .responsive-gutters > [class*='col-'] {
+    padding: 15px;
+  }
+}
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+.container-sized {
+  width: 100%;
+  height: 100%;
+}
+.split-box {
+  background-color: #696969;
+  max-height: 370px;
+  /* Custom, iPhone Retina */
+  /* Extra Small Devices, Phones */
+  /* Small Devices, Tablets */
+  /* Medium Devices, Desktops */
+  /* Large Devices, Wide Screens */
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .split-box .top {
+    padding-right: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .split-box .bottom {
+    padding-left: 0;
+  }
+}
+.split-box .bottom-container {
+  min-height: 180px;
+  padding: 5px;
+}
+.split-box .top .image-container {
+  height: auto;
+}
+.split-box .top img {
+  max-height: 180px;
+  min-height: 180px;
+  height: 100%;
+}
+.split-box .top .module-label {
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+}
+.split-box .top .module-label h6 {
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #3399FF;
+  opacity: 0.8;
+  color: #FFFFFF;
+}
+@media only screen and (min-width: 320px) {
+  .split-box .action-link-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    clear: both;
+    left: 14px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .split-box .bottom-container {
+    min-height: 180px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .split-box .top img {
+    width: 100%;
+  }
+}
+.secondary-display-container {
+  text-align: center;
+}
+.secondary-display-controls {
+  /* Custom, iPhone Retina */
+  position: relative;
+  /* Extra Small Devices, Phones */
+  /* Small Devices, Tablets */
+  /* Medium Devices, Desktops */
+  /* Large Devices, Wide Screens */
+}
+.secondary-display-controls .secondary-display-control {
+  /* Custom, iPhone Retina */
+  /* Extra Small Devices, Phones */
+  /* Small Devices, Tablets */
+  /* Medium Devices, Desktops */
+  /* Large Devices, Wide Screens */
+}
+.secondary-display-controls .secondary-display-control .btn-responsive {
+  padding: 0;
+}
+@media only screen and (min-width: 320px) {
+  .secondary-display-controls {
+    margin-top: -20px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .secondary-display-controls {
+    margin-top: 0;
+    margin-bottom: -20px;
+  }
+}
+.secondary-display-content {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+.secondary-display-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.secondary-display-content ul > li {
+  border-top: 1px #FFFFFF solid;
+}
+.secondary-display-content .secondary-display-list-container {
+  /* Custom, iPhone Retina */
+  /* Extra Small Devices, Phones */
+  /* Small Devices, Tablets */
+  /* Medium Devices, Desktops */
+  /* Large Devices, Wide Screens */
+}
+@media (max-width: 768px) {
+  .secondary-display-content .secondary-display-list-container ul > li {
+    padding: 5px;
+  }
+}
+.secondary-display {
+  z-index: 10;
+  background-color: #FFFFFF;
+  margin-top: 10px;
+  /* Custom, iPhone Retina */
+  /* Extra Small Devices, Phones */
+  /* Small Devices, Tablets */
+  /* Medium Devices, Desktops */
+  /* Large Devices, Wide Screens */
+}
