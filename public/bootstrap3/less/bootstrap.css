@@ -1371,24 +1371,24 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
-.container {
+.container-bs3 {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .container {
+  .container-bs3 {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  .container {
+  .container-bs3 {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .container {
+  .container-bs3 {
     width: 1170px;
   }
 }
@@ -1398,7 +1398,7 @@ pre code {
   padding-left: 15px;
   padding-right: 15px;
 }
-.row {
+.row-bs3 {
   margin-left: -15px;
   margin-right: -15px;
 }
@@ -3130,21 +3130,21 @@ input[type="button"].btn-block {
 .fade.in {
   opacity: 1;
 }
-.collapse {
+.collapse-bs3 {
   display: none;
   visibility: hidden;
 }
-.collapse.in {
+.collapse-bs3.in-bs3 {
   display: block;
   visibility: visible;
 }
-tr.collapse.in {
+tr.collapse-bs3.in {
   display: table-row;
 }
-tbody.collapse.in {
+tbody.collapse-bs3.in {
   display: table-row-group;
 }
-.collapsing {
+.collapsing-bs3 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -5995,12 +5995,12 @@ button.close {
 .clearfix:after,
 .dl-horizontal dd:before,
 .dl-horizontal dd:after,
-.container:before,
-.container:after,
+.container-bs3:before,
+.container-bs3:after,
 .container-fluid:before,
 .container-fluid:after,
-.row:before,
-.row:after,
+.row-bs3:before,
+.row-bs3:after,
 .form-horizontal .form-group:before,
 .form-horizontal .form-group:after,
 .btn-toolbar:before,
@@ -6026,9 +6026,9 @@ button.close {
 }
 .clearfix:after,
 .dl-horizontal dd:after,
-.container:after,
+.container-bs3:after,
 .container-fluid:after,
-.row:after,
+.row-bs3:after,
 .form-horizontal .form-group:after,
 .btn-toolbar:after,
 .btn-group-vertical > .btn-group:after,

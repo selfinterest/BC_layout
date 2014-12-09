@@ -25,9 +25,9 @@
 
 </head>
 <body>
-    <div id="application" class="container three-columns-two-rows">
+    <div id="application" class="container-bs3 three-columns-two-rows">
         <script type="text/ng-template" id="split-box.html">
-            <div class="row">
+            <div class="row-bs3">
                 <div class="col-sm-4 col-md-5 col-lg-12  top hidden-xs">
                     <div class="image-container">
                         <img class="container-sized img-responsive"  ng-src="{{ img }}"/>
@@ -39,14 +39,14 @@
                 <div class="col-sm-8 col-md-7 col-lg-12 bottom">
                     <!-- the bottom is always visible, no matter what size -->
                     <div class="bottom-container">
-                        <div class="row">
+                        <div class="row-bs3">
                             <div class="col-xs-12">
                                 <h1 class="title">{{ title }}</h1>
                                 <h2>July 2014</h2>
-                                <p class="text">{{ text }}</p>
+                                <div class="text">{{ text }}</div>
                             </div>
                         </div>
-                        <div class="row action-link-container">
+                        <div class="row-bs3 action-link-container">
                             <div class="col-xs-5 pull-right" >
                                 <a class="action-link" href="">Action link &gt;</a>
                             </div>
@@ -60,19 +60,19 @@
                 <div class="secondary-display-container">
                     <a href="" class="" ng-click="collapse = !collapse"><span class="glyphicon" ng-class="{'glyphicon-chevron-down': collapse, 'glyphicon-chevron-up': !collapse}"></span></a>
                 </div>
-                <!-- <div class="row secondary-display-control">
+                <!-- <div class="row-bs3 secondary-display-control">
                     <div class="col-xs-12" style="text-align: center;">
                         <div ng-class="{'secondary-display-control-container-collapsed': collapse, 'secondary-display-control-container': !collapse}" >
 
                         </div>
                     </div>
                 </div> -->
-                <div class="row secondary-display-content" collapse="collapse">
+                <div class="row-bs3 secondary-display-content" collapse="collapse">
                     <div class="col-xs-12">
                         <div class="secondary-display-list-container">
                             <ul>
                                 <li>
-                                    <div class="row">
+                                    <div class="row-bs3">
                                         <div class="col-sm-4 hidden-xs hidden-ms">
                                             <img class="img-responsive" src="http://placekitten.com/370/180"/>
                                         </div>
@@ -82,7 +82,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="row">
+                                    <div class="row-bs3">
                                         <div class="col-sm-4 hidden-xs hidden-ms">
                                             <img class="img-responsive" src="http://placekitten.com/370/180"/>
                                         </div>
@@ -92,7 +92,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="row">
+                                    <div class="row-bs3">
                                         <div class="col-xs-5 col-xs-offset-7 pull-right">
                                             <a class="action-link" href="">Action link &gt;</a>
                                         </div>
@@ -105,20 +105,20 @@
                 </div>
             </div>
         </script>
-        <div class="row no-gutter responsive-gutters">
+        <div class="row-bs3 no-gutter responsive-gutters">
             <div class="col-xs-12 col-md-6 col-lg-4 feature">
                 <div class="split-box featured-insight" type="Featured insight" title="Shedding light on China's shadow banking" text="Changes in China's financial system have raised concerns over the use of trusts and their potential risks." img="http://placekitten.com/370/180" style=""></div>
-                <div class="row secondary-display-controls featured-insight" >
+                <div class="row-bs3 secondary-display-controls featured-insight" >
                 </div>
             </div>
            <div class="col-xs-12 col-md-6 col-lg-4 feature">
-                <div class="split-box featured-video" type="Featured video" title="One line title goes here" text="BLAH BLAH BLAH" img="http://placekitten.com/370/180" style=""></div>
-               <div class="row secondary-display-controls featured-video" img="http://placekitten.com/370/180">
+                <div class="split-box featured-video" type="Featured video" title="One line title goes here" text="Japan is now the world leader in inflation. At least among the world's major economies. This chart, tweeted by Tom Orlik of Bloomberg, shows inflation for the U.S., Eurozone, China, and Japan. As you can see, Japan is the only major economy that has inflation running meaningfully above 2%, while Europe continues to flirt with deflation. Japan's inflation, however, has not come without some extraordinary measures from its central bank. Last year, newly-elected Prime Minister Shinzo Abe announced a 'three arrow' plan to jumpstart the long-lagging Japanese economy. This plan involved a massive quantitative easing program, government stimulus, and structural reforms aimed at making Japan more competitive. People call it Abenomics." img="http://placekitten.com/370/180" style=""></div>
+               <div class="row-bs3 secondary-display-controls featured-video" img="http://placekitten.com/370/180">
                </div>
            </div>
             <div class="col-xs-12 col-md-6 col-lg-4 feature">
                 <div class="split-box featured-literature" type="Featured literature" title="One line title goes here" text="BLAH BLAH BLAH" img="http://placekitten.com/370/180" style=""></div>
-                <div class="row secondary-display-controls featured-literature" >
+                <div class="row-bs3 secondary-display-controls featured-literature" >
                 </div>
             </div>
             <div class="col-xs-12 col-md-6 col-lg-4 feature">
@@ -168,7 +168,7 @@
     </div><!-- /container -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
-    <script src="/js/ui-bootstrap.min.js"></script>
+    <script src="/js/ui-bootstrap-tpls.js"></script>
     <script src="/js/app.js"></script>
 
 </body>

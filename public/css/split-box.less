@@ -21,7 +21,22 @@
     }
     .bottom-container {
         min-height: 180px;
-        padding: 5px;
+        max-height: 180px;
+        div.text {
+            line-height: 1em;
+            height: 5em;    //exactly five lines
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: pre-line;
+            word-break: keep-all;
+            //word-break: break-all;
+            hyphens: auto;
+
+        }
+
+        padding-left: 5px;
+        padding-right: 5px;
 
     }
 
