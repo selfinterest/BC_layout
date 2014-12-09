@@ -22,9 +22,14 @@
     .bottom-container {
         min-height: 180px;
         max-height: 180px;
-        div.text {
-            line-height: 1em;
-            height: 5em;    //exactly five lines
+        > .bottom-text-container {
+           max-height: 150px;       //the height of the bottom-container, minus the height of the action-link row
+            overflow: hidden;
+        }
+        p.text {
+            height: 100px;
+            //line-height: 1em;
+            //height: 5em;    //exactly five lines
             display: inline-block;
             //overflow: hidden;
             //text-overflow: ellipsis;

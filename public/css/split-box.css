@@ -71,9 +71,12 @@
   padding-left: 5px;
   padding-right: 5px;
 }
-.split-box .bottom-container div.text {
-  line-height: 1em;
-  height: 5em;
+.split-box .bottom-container > .bottom-text-container {
+  max-height: 150px;
+  overflow: hidden;
+}
+.split-box .bottom-container p.text {
+  height: 100px;
   display: inline-block;
 }
 .split-box .top {
