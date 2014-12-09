@@ -6,6 +6,7 @@ angular.module("TestApp", ["ui.bootstrap"])
         return {
             restrict: "C",
             templateUrl: "split-box.html",
+            transclude: true,
             scope: {
                 type: "@",
                 title: "@",
@@ -29,6 +30,19 @@ angular.module("TestApp", ["ui.bootstrap"])
             }
         }
 
+    }])
+    .directive('dotdotdot', ["$timeout", function($timeout){
+        return {
+            restrict: 'A',
+            link: function(scope, element, attributes) {
+                $timeout(function(){
+                    scope.$watch(function() {
+                        element.dotdotdot({watch: true});
+                    });
+                }, 0);
+
+            }
+        }
     }])
 ;
 

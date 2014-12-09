@@ -75,11 +75,9 @@
   line-height: 1em;
   height: 5em;
   display: inline-block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: pre-line;
-  word-break: keep-all;
-  hyphens: auto;
+}
+.split-box .top {
+  max-height: 180px;
 }
 .split-box .top .image-container {
   height: auto;
@@ -88,6 +86,13 @@
   max-height: 180px;
   min-height: 180px;
   height: 100%;
+  width: 100%;
+}
+.split-box .top iframe {
+  max-height: 180px;
+  min-height: 180px;
+  height: 100%;
+  width: 100%;
 }
 .split-box .top .module-label {
   position: absolute;
